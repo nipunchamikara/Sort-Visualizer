@@ -105,7 +105,7 @@ const Home = () => {
 
 
   return (
-    <div style={{ backgroundColor: !darkmode ? '#252422' : '#fff' }} >
+    <div style={{ backgroundColor: !darkmode ? '#252422' : '#fff', minHeight: "100vh" }} >
 
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Box sx={{ p: '10px' }}>
@@ -162,7 +162,7 @@ const Home = () => {
       <Box width={'800px'} height={'900'} margin={'auto'} sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
         {
           array.map((value, idx) => {
-            return <Box key={idx} height={`${value * (550 / Math.max(...array))}px`} width={`${800 / length}px`} bgcolor={idx === swappingIndices ? '#d62828' : '#09D3AC'} ></Box>
+            return <Box key={idx} height={`${value * (550 / Math.max(...array))}px`} width={`${800 / length}px`} bgcolor={idx === swappingIndices ? (darkmode ? '#252422' : '#fff') : '#09D3AC'} ></Box>
           })
         }
 
